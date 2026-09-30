@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Frases Motivacionais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding-top: 80px;
+      background-color: #1e90ff;
+      color: white;
+      min-height: 100vh;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 30px;
+    }
+    .mensagem {
+      font-size: 22px;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px 30px;
+      border-radius: 12px;
+      display: inline-block;
+      min-width: 320px;
+      max-width: 500px;
+      margin-bottom: 30px;
+      line-height: 1.4;
+    }
+    .botao {
+      background-color: white;
+      color: #1e90ff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .botao:hover {
+      background-color: #e6f0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Frases Motivacionais</h1>
+
+  <p class="mensagem">Clique no botão para ver uma frase ✨</p>
+
+  <button class="botao">Próxima frase</button>
+
+  <script>
+    const botao = document.querySelector(".botao");
+    const mensagem = document.querySelector(".mensagem");
+
+    const frases = [
+      "Acredite em você! Cada passo te aproxima do seu objetivo 🚀",
+      "O sucesso é a soma de pequenos esforços repetidos todos os dias 💪",
+      "Não espere o momento perfeito. Comece agora e faça acontecer!",
+      "Você é mais forte do que imagina. Continue!",
+      "Errar faz parte. O importante é nunca desistir 🔥",
+      "Grandes conquistas começam com a decisão de tentar.",
+      "Seja a melhor versão de você mesmo todos os dias ✨",
+      "A disciplina é a ponte entre metas e realizações."
+    ];
+
+    let indice = 0;
+
+    function mostrarMensagem() {
+      mensagem.textContent = frases[indice];
+      indice = (indice + 1) % frases.length;
+    }
+
+    botao.addEventListener("click", mostrarMensagem);
+  </script>
+
+</body>
+</html>
